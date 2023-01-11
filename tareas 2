@@ -1,0 +1,168 @@
+
+Índice:
+1. Calcula el mayor de 2 enteros mediante el uso de un IF
+
+2. Calcula la calificación en palabras de la nota de un examen almacenada en una variable (5 y 6 aprobado, 7 y 8 notable, 9 y 10 sobresaliente) mediante una estructura switch
+
+3. Declara dos arrays:
+
+* uno de motos con cuatro motos
+
+* uno de coches con cuatro coches
+
+A continuación
+
+a) Recorre uno de los arrays mostrando sus elementos
+
+b) Ordena y muestra sus elementos
+
+c) Haz que lo indicado en a y b se realice mediante una llamada a la funcion mostrarResultadosOrdenados
+
+d) Indica por pantalla cuantos elementos hay
+
+e) Busca si un elemento se encuentro e informa de ello
+
+4. Muestra la fecha y hora en al menos dos formatos distintos
+
+
+
+1.-
+
+<?php
+    $num1 = 10;
+    $num2 = 20;
+
+    if ($num1 > $num2) {
+        echo "$num1 es mayor que $num2.";
+    } else {
+        echo "$num2 es mayor que $num1.";
+    }
+?>
+
+
+2.-
+<?php
+ $grade = 2;
+
+    switch (true) {
+        case ($grade >= 5 && $grade <= 6):
+            echo "Aprobado";
+            break;
+        case ($grade >= 7 && $grade <= 8):
+            echo "Notable";
+            break;
+        case ($grade >= 9 && $grade <= 10):
+            echo "Sobresaliente";
+            break;
+        case ($grade >= 1 && $grade <= 4):
+            echo "Suspenso";
+            break;
+        default:
+            echo "Nota inválida";
+    }
+
+?>
+
+
+3.-
+
+
+3-a
+<?php
+    $motos = array("Yamaha", "Kawasaki", "Honda", "Suzuki");
+    $coches = array("Ferrari", "Ford", "McLaren", "Mercedes");
+
+
+
+
+  foreach ($motos as $moto) {
+        echo $moto . "<br>";
+    }
+  ?>
+  
+  3-b
+  <?php
+    $motos = array("Yamaha", "Kawasaki", "Honda", "Suzuki");
+    $coches = array("Ferrari", "Ford", "McLaren", "Mercedes");
+      
+ 
+ 
+ 
+ sort($coches);
+    foreach ($coches as $coche) {
+        echo $coche . "<br>";
+    }
+?>
+
+
+3-c
+
+
+
+<?php
+    $motos = array("Yamaha", "Kawasaki", "Honda", "Suzuki");
+    $coches = array("Ferrari", "Ford", "McLaren", "Mercedes");
+    
+ function mostrarResultadosOrdenados($array) {
+        sort($array);
+        foreach ($array as $element) {
+            echo $element . "<br>";
+        }
+    }
+
+  
+    mostrarResultadosOrdenados($coches);
+
+
+?>
+
+3-d
+<?php
+    $motos = array("Yamaha", "Kawasaki", "Honda", "Suzuki");
+    $coches = array("Ferrari", "Ford", "McLaren", "Mercedes");
+
+function mostrarCantidadElementos($array) {
+        echo "El array tiene " . count($array) . " elementos.";
+    }
+
+   
+    mostrarCantidadElementos($coches);
+
+
+
+
+?>
+
+3-e
+
+<?php
+    $motos = array("Yamaha", "Kawasaki", "Honda", "Suzuki");
+    $coches = array("Ferrari", "Ford", "McLaren", "Mercedes", "BMW");
+
+     //comprobar motos
+    if (in_array("Yamaha", $motos)) {
+        echo "El elemento se encuentra en el array de motos.";
+    } else {
+        echo "El elemento no se encuentra en el array de motos.";
+    }
+    
+    //comprobar coches
+    if (in_array("Mercedes", $coches)) {
+        echo "El elemento se encuentra en el array de coches.";
+    } else {
+        echo "El elemento no se encuentra en el array de coches.";
+    }
+
+
+
+
+?>
+
+4.-
+<?php
+    echo date("d M y");
+    echo "<br>";
+    echo date("l jS \pf F Y h:i:s A");
+	echo "<br>";
+?>
+
