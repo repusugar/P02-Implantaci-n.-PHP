@@ -1,0 +1,39 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<title>Formulario PHP</title> 
+</head> 
+<body> 
+
+<form action="submit.php" method="post"> 
+
+<h1>Formulario ejercicios PHP P03</h1> 
+
+<label for="nombre">Nombre:</label> 
+<input type="text" id="nombre" name="nombre">
+<br><br> 
+
+<label for="email">Email:</label> 
+<input type="email" id="email" name="email">
+<br><br> 
+
+<label for="sitio_web">Sitio web:</label> 
+<input type="url" id="sitio_web" name="sitio_web">
+<br><br> 
+
+<label for="comentario">Comentario:</label> 
+<textarea id="comentario" name="comentario"></textarea>
+<br><br> 
+
+<label for="genero">Género:</label> 
+<input type="radio" id="genero" name="genero" value="hombre">Hombre 
+<input type="radio" id="genero" name="genero" value="mujer">Mujer 
+<input type="radio" id="genero" name="genero" value="otro">Otro
+<br><br> 
+
+<input type="submit" value="Enviar"> 
+
+</form> 
+
+</body> 
+</html> 
