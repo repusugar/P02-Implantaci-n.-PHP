@@ -1,8 +1,8 @@
 <?php
 
-$servername = "php";
+$servername = "localhost";
 $username = "pvs";
-$password = "";
+$password = "abc123.";
 $dbname = "dbphp";
 
 // Create connection
@@ -33,7 +33,7 @@ if (mysqli_query($conn, $sql)) {
 }
 
 // Update data
-$new_firstname = "Jane";
+$new_firstname = "Pablo";
 $sql = "UPDATE users SET firstname='$new_firstname' WHERE id=1";
 if (mysqli_query($conn, $sql)) {
     echo "Datos actualizados correctamente<br>";
